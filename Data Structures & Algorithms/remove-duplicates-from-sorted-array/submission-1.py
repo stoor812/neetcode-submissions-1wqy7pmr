@@ -1,0 +1,18 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        left = 0
+        right = 0
+        k = 1
+
+        for right in range(1, len(nums)):
+            if nums[right] != nums[right - 1]:
+                left += 1
+                k += 1
+                nums[left] = nums[right]
+
+        return k
+
+
+        
+        
+        
